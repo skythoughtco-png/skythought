@@ -1,0 +1,433 @@
+/*==================================
+            HERO
+==================================*/
+
+.hero{
+    position:relative;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    background:
+        linear-gradient(rgba(255,255,255,.78), rgba(255,255,255,.88)),
+        url("../images/hero.jpg") center center/cover no-repeat;
+    overflow:hidden;
+}
+
+.hero-overlay{
+    position:absolute;
+    inset:0;
+    background:transparent;
+}
+
+.hero .container{
+    position:relative;
+    z-index:2;
+}
+
+.hero-badge{
+    display:inline-block;
+    padding:10px 22px;
+    border-radius:50px;
+    background:#198754;
+    color:#fff;
+    font-weight:700;
+    margin-bottom:20px;
+}
+
+.hero-title{
+    font-size:58px;
+    font-weight:800;
+    color:#198754;
+    margin-bottom:10px;
+}
+
+.hero-subtitle{
+    font-size:28px;
+    color:#444;
+    margin-bottom:20px;
+}
+
+.hero-text{
+    font-size:18px;
+    line-height:2;
+    color:#555;
+    max-width:700px;
+}
+
+.hero-buttons{
+    margin-top:35px;
+}
+
+.hero-buttons .btn{
+    padding:14px 34px;
+    border-radius:50px;
+    margin:8px;
+    font-weight:bold;
+    transition:.3s ease;
+}
+
+.hero-buttons .btn:hover{
+    transform:translateY(-4px);
+    box-shadow:0 10px 25px rgba(0,0,0,.20);
+}
+
+.hero-logo{
+    width:220px;
+    max-width:100%;
+    display:block;
+    margin:auto;
+    animation:floatLogo 4s ease-in-out infinite;
+}
+
+@keyframes floatLogo{
+
+    0%{transform:translateY(0);}
+
+    50%{transform:translateY(-12px);}
+
+    100%{transform:translateY(0);}
+
+}
+
+.hero-wave{
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    line-height:0;
+}
+
+.hero-wave svg{
+    width:100%;
+    height:90px;
+    display:block;
+}
+
+/*==================================
+        Responsive Hero
+==================================*/
+
+@media (max-width:991px){
+
+    .hero{
+        text-align:center;
+        padding:140px 0 80px;
+    }
+
+    .hero-title{
+        font-size:42px;
+    }
+
+    .hero-subtitle{
+        font-size:22px;
+    }
+
+    .hero-text{
+        margin:auto;
+    }
+
+    .hero-logo{
+        width:150px;
+        margin:0 auto 30px;
+    }
+
+}
+
+/*==================================
+            SERVICES
+==================================*/
+
+#services{
+    background:#f8f9fa;
+    padding:90px 0;
+}
+
+#services .card{
+    border:none;
+    border-radius:20px;
+    transition:.4s ease;
+    overflow:hidden;
+}
+
+#services .card:hover{
+    transform:translateY(-12px);
+    box-shadow:0 20px 45px rgba(0,0,0,.15);
+}
+
+#services i{
+    font-size:55px;
+    color:#198754;
+    transition:.4s;
+}
+
+#services .card:hover i{
+    transform:scale(1.15) rotate(5deg);
+}
+
+#services h4{
+    font-weight:700;
+    margin:20px 0 15px;
+}
+
+#services p{
+    color:#666;
+    line-height:1.9;
+}
+
+/*==================================
+            WHY US
+==================================*/
+
+.why-card{
+    border-radius:20px;
+    transition:.35s;
+    overflow:hidden;
+}
+
+.why-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 40px rgba(0,0,0,.15)!important;
+}
+
+.why-icon{
+    width:85px;
+    height:85px;
+    margin:auto;
+    border-radius:50%;
+    background:#198754;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:34px;
+    transition:.35s;
+}
+
+.why-card:hover .why-icon{
+    transform:scale(1.1) rotate(8deg);
+}
+
+.why-card h5{
+    font-weight:700;
+}
+
+.why-card p{
+    line-height:1.8;
+}
+
+/*==================================
+        BUSINESS FORM
+==================================*/
+
+#business{
+    background:#f8f9fa;
+    padding:90px 0;
+}
+
+#business .card{
+    border:none;
+    border-radius:25px;
+}
+
+#business .form-control,
+#business .form-select{
+    border-radius:12px;
+    padding:14px;
+    transition:.3s;
+}
+
+#business .form-control:focus,
+#business .form-select:focus{
+    border-color:#198754;
+    box-shadow:0 0 0 .2rem rgba(25,135,84,.15);
+}
+
+#business label{
+    font-weight:600;
+}
+
+#business .btn{
+    transition:.3s;
+}
+
+#business .btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 12px 25px rgba(25,135,84,.35);
+}
+
+/*==================================
+        WHATSAPP BUTTON
+==================================*/
+
+.whatsapp-btn{
+    position:fixed;
+    left:25px;
+    bottom:25px;
+    width:60px;
+    height:60px;
+    background:#25D366;
+    color:#fff;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:30px;
+    text-decoration:none;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+    z-index:999;
+}
+
+/*==================================
+        SCROLL TO TOP
+==================================*/
+
+#topBtn{
+    position:fixed;
+    right:25px;
+    bottom:25px;
+    width:55px;
+    height:55px;
+    border:none;
+    border-radius:50%;
+    background:#198754;
+    color:#fff;
+    font-size:22px;
+    cursor:pointer;
+    display:none;
+    z-index:999;
+}/*==========================
+      BOOKING
+==========================*/
+
+#booking{
+    padding:90px 0;
+}
+
+.booking-card{
+    border-radius:20px;
+    overflow:hidden;
+    transition:.35s;
+}
+
+.booking-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 40px rgba(0,0,0,.18)!important;
+}
+
+.booking-card img{
+    height:240px;
+    object-fit:cover;
+}
+
+.booking-card .badge{
+    font-size:14px;
+    padding:8px 16px;
+    border-radius:30px;
+}
+
+.booking-card h4{
+    font-weight:700;
+    margin:15px 0 10px;
+}
+
+.booking-card p{
+    line-height:1.8;
+}
+
+.booking-card .btn{
+    margin-top:15px;
+    transition:.3s;
+}
+
+.booking-card .btn:hover{
+    transform:scale(1.03);
+}
+/*==================================
+        TOURISM
+==================================*/
+
+#tourism{
+    padding:90px 0;
+    background:#f8f9fa;
+}
+
+.tourism-card{
+    border-radius:20px;
+    transition:.35s;
+    overflow:hidden;
+}
+
+.tourism-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 40px rgba(0,0,0,.15)!important;
+}
+
+.tourism-icon{
+    width:90px;
+    height:90px;
+    margin:auto;
+    border-radius:50%;
+    background:#198754;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:40px;
+    transition:.35s;
+}
+
+.tourism-card:hover .tourism-icon{
+    transform:rotate(10deg) scale(1.1);
+}
+
+.tourism-card h5{
+    font-weight:700;
+    margin-bottom:15px;
+}
+
+.tourism-card p{
+    color:#666;
+    line-height:1.8;
+}
+/*==========================
+      CONTACT
+==========================*/
+
+#contact{
+    padding:90px 0;
+}
+
+#contact .card{
+    border:none;
+    border-radius:20px;
+    transition:.35s;
+}
+
+#contact .card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 20px 40px rgba(0,0,0,.15);
+}
+
+#contact .form-control{
+    border-radius:12px;
+    padding:14px;
+}
+
+#contact .form-control:focus{
+    border-color:#198754;
+    box-shadow:0 0 0 .2rem rgba(25,135,84,.15);
+}
+
+#contact .btn{
+    transition:.3s;
+}
+
+#contact .btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 12px 25px rgba(25,135,84,.35);
+}
+.phone-number{
+    direction: ltr;
+    unicode-bidi: bidi-override;
+    display: inline-block;
+}
